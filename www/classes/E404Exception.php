@@ -7,21 +7,23 @@
  */
 
 class E404Exception extends Exception{
-    
+     private $message;
+     private $numerror;
 {
     public function display($template)
 {
     // foreach ($this->data as $key =>$val){
     //      $$key = $val;
     //  }
-    for ($this->rewind(); $this->valid();$this->next){
-        $val=$this->current();
-        $key=$this->key();
+    foreach ($this->rewind(); $this->valid();$this->next){
+        $numerror=$this->current();
+        $num=$this->numerror();
     }
     include __DIR__ . '/../views/ . $template';
 }
-    public function add($e)
+    public function add($e, $num)
     {
-        $this[]=$e;
+        $this->message=$e;
+        $this->numerror=$num;
     }
 }

@@ -16,6 +16,6 @@ $method = 'action' . $act;
     //output error message and exit from code
     $e->getMessage;
     $emessages =new E404Exception();
-    $emessages->add($e->getMessage());
+    $emessages->add($e->getMessage(),$num);
     $emessages->display('errors.php');
 }
